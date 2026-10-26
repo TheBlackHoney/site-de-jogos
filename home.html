@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EXO</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #1B2A1F;
+    color: #F5F5F5;
+}
+
+header{
+    background-color: #2D3E2F;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 3px solid #A3C585;
+}
+
+header h1{
+    font-family: 'Bebas Neue', sans-serif;
+    color: #A3C585;
+    font-size: 60px;
+    letter-spacing: 10px;
+    margin: 0;
+}
+
+nav{
+    text-align: center;
+    padding: 15px;
+    background-color: #243226;
+}
+
+nav a{
+    color: white;
+    text-decoration: none;
+    margin: 15px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav a:hover{
+    color: #A3C585;
+}
+
+#banner{
+    text-align: center;
+    padding: 60px 20px;
+}
+
+#banner h2{
+    font-family: 'Bebas Neue', sans-serif;
+    color: #A3C585;
+    font-size: 45px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+
+}
+
+#banner p{
+    max-width: 700px;
+    margin: auto;
+    font-size: 18px;
+}
+
+#banner img{
+    width: 750px;
+}
+
+#jogos{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 40px;
+}
+
+.card{
+    background-color: #2D3E2F;
+    width: 280px;
+    border-radius: 12px;
+    overflow: hidden;
+    text-align: center;
+    border: 2px solid #A3C585;
+    transition: 0.4s;
+}
+
+.card h3 a{
+    color: #A3C585;
+
+    text-decoration: none;
+}
+
+.card:hover{
+    transform: scale(1.08);
+    box-shadow: 0 0 20px rgba(163,197,133,0.5);
+}
+
+.card img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card h3{
+    color: #A3C585;
+    font-size: 24px;
+    margin-top: 15px;
+}
+
+.card p{
+    padding: 0 15px 20px;
+}
+
+#ranking{
+   width: 100%;
+    max-width: 4000px;
+}
+
+h1{
+    text-align: center;
+    margin-bottom: 30px;
+    color: #A3C585;
+    font-size: 2rem;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #243226;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+thead{
+    background-color: #A3C585;
+}
+
+th{
+    padding: 10px 15px;
+    text-align: left;
+    color: #1B2A1F;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+td{
+     padding: 8px 15px;
+    border-bottom: 1px solid rgba(163, 197, 133, 0.2);
+}
+
+tbody tr{
+    transition: 0.3s;
+}
+
+tbody tr:hover{
+    background-color: #2D4030;
+    transform: scale(1.01);
+}
+
+tbody tr:last-child td{
+    border-bottom: none;
+}
+
+/* Destaque para as posições */
+td:first-child{
+    font-weight: bold;
+    color: #A3C585;
+}
+
+/* Responsividade */
+@media (max-width: 768px){
+
+    body{
+        padding: 20px;
+    }
+
+    table{
+        font-size: 14px;
+    }
+
+    th,
+    td{
+        padding: 12px;
+    }
+
+    h1{
+        font-size: 1.5rem;
+    }
+}
+
+.top5{
+    width: 80%;
+    margin: 40px auto;
+    border-collapse: collapse;
+    background-color: #243226;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+
+.top5 th{
+    color: #1B2A1F;
+    padding: 12px;
+    text-align: left;
+}
+
+.top5 td{
+    padding: 10px 12px;
+    color: #A3C585;
+    border-bottom: 1px solid rgba(163, 197, 133, 0.2);
+}
+
+.top5 tr:hover{
+    background-color: #2D4030;
+}
+
+footer{
+    text-align: center;
+    padding: 20px;
+    background-color: #2D3E2F;
+    border-top: 2px solid #A3C585;
+    margin-top: 30px;
+}
+
+</style>
+</head>
+<body>
+
+<header>
+    <h1>EXO</h1>
+</header>
+
+<nav>
+    <a href="#banner">Início</a>
+    <a href="#jogos">Jogos</a>
+    <a href="#ranking">Ranking</a>
+    <a href="./login.html">Sair</a>
+</nav>
+
+<section id="banner">
+
+    <h2>Sobreviva Além dos Limites</h2>
+    
+
+    <p>
+        Explore ambientes perigosos, enfrente ameaças constantes
+        e faça o possível para permanecer vivo.
+    </p>
+    <br>
+
+    <img src="./img/banner site jogo.jpg" alt="banner">
+
+</section>
+
+<section id="jogos">
+
+
+    <div class="card">
+        <img src="./img/dg.jpg" alt="Days Gone">
+        <h3><a href="./daysgone.html"> Days Gone</a></h3>
+        <p>
+            Sobreviva em um mundo devastado por infectados
+            e enfrente hordas perigosas.
+        </p>
+    </div>
+
+
+        <div class="card">
+        <img src="./img/The Five Nights at Freddy game is leaking, says the creator, talking about it and talking abo___.jpg" alt="Into The Pit">
+        <h3><a href="./fnaf.html"> Into The Pit</a></h3>
+        <p>
+            Viaje por eventos assustadores e descubra segredos
+            escondidos em um passado sombrio.
+        </p>
+    
+       
+</div>
+
+</a>
+
+       
+    </div>
+
+    <div class="card">
+        <img src="./img/Blumhouse and James Wan Bringing ‘Dead by Daylight’ to the Big Screen.jpg" alt="Dead By Daylight">
+        <h3><a href="./dbd.html"> Dead By Daylight</a></h3>
+        <p>
+            Coopere com outros sobreviventes e escape
+            de assassinos implacáveis.
+        </p>
+    </div>
+
+    <section id="ranking">
+ <h1>Ranking dos Melhores Jogos</h1>
+   <table>
+    <thead>
+        <tr>
+            <th>Posição</th>
+            <th>Jogo</th>
+            <th>Nota</th>
+            <th>Gênero</th>
+            <th>Plataformas</th>
+        </tr>
+    </thead>
+
+<tbody>
+    <tr>
+        <td>1º</td>
+        <td>Alien: Isolation</td>
+        <td>10,0</td>
+        <td>Terror, Sobrevivência, Ficção Científica</td>
+        <td>PC, PS4, PS5, Xbox, Switch</td>
+    </tr>
+
+    <tr>
+        <td>2º</td>
+        <td>The Forest</td>
+        <td>9,8</td>
+        <td>Terror, Sobrevivência, Mundo Aberto</td>
+        <td>PC, PS4</td>
+    </tr>
+
+    <tr>
+        <td>3º</td>
+        <td>Dead Space</td>
+        <td>9,7</td>
+        <td>Terror, Sobrevivência, Ficção Científica</td>
+        <td>PC, PS5, Xbox Series X/S</td>
+    </tr>
+
+    <tr>
+        <td>4º</td>
+        <td>Outlast</td>
+        <td>9,6</td>
+        <td>Terror Psicológico, Sobrevivência</td>
+        <td>PC, PS4, PS5, Xbox, Switch</td>
+    </tr>
+
+    <tr>
+        <td>5º</td>
+        <td>Sons of the Forest</td>
+        <td>9,5</td>
+        <td>Terror, Sobrevivência, Mundo Aberto</td>
+        <td>PC</td>
+    </tr>
+
+    <tr>
+        <td>6º</td>
+        <td>FNaF: Into the Pit</td>
+        <td>9,3</td>
+        <td>Terror, Aventura, Puzzle</td>
+        <td>PC, PS4, PS5, Xbox, Switch</td>
+    </tr>
+
+    <tr>
+        <td>7º</td>
+        <td>Dead by Daylight</td>
+        <td>9,2</td>
+        <td>Terror Multiplayer, Sobrevivência</td>
+        <td>PC, PS4, PS5, Xbox, Switch</td>
+    </tr>
+
+    <tr>
+        <td>8º</td>
+        <td>Subnautica</td>
+        <td>9,1</td>
+        <td>Sobrevivência, Exploração, Terror Subaquático</td>
+        <td>PC, PS4, PS5, Xbox, Switch</td>
+    </tr>
+
+    <tr>
+        <td>9º</td>
+        <td>Dying Light</td>
+        <td>9,0</td>
+        <td>Terror, Ação, Sobrevivência Zumbi</td>
+        <td>PC, PS4, PS5, Xbox</td>
+    </tr>
+
+    <tr>
+        <td>10º</td>
+        <td>Project Zomboid</td>
+        <td>8,9</td>
+        <td>Sobrevivência Zumbi, Simulação</td>
+        <td>PC</td>
+    </tr>
+</tbody>
+
+</table>
+
+</section>
+
+</section>
+
+<table class="top5">
+    <h1>Top 5</h1>
+    <thead>
+        <tr>
+            <th>Posição</th>
+            <th>Jogo</th>
+            <th>Nota</th>
+            <th>Gênero</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <td> 1º</td>
+            <td>Alien: Isolation</td>
+            <td>10,0</td>
+            <td>Terror, Sobrevivência, Ficção Científica</td>
+        </tr>
+
+        <tr>
+            <td> 2º</td>
+            <td>The Forest</td>
+            <td>9,8</td>
+            <td>Terror, Sobrevivência, Mundo Aberto</td>
+        </tr>
+
+        <tr>
+            <td>3º</td>
+            <td>Dead Space</td>
+            <td>9,7</td>
+            <td>Terror, Sobrevivência, Ficção Científica</td>
+        </tr>
+
+        <tr>
+            <td>4º</td>
+            <td>Outlast</td>
+            <td>9,6</td>
+            <td>Terror Psicológico, Sobrevivência</td>
+        </tr>
+
+        <tr>
+            <td>5º</td>
+            <td>Sons of the Forest</td>
+            <td>9,5</td>
+            <td>Terror, Sobrevivência, Mundo Aberto</td>
+        </tr>
+    </tbody>
+</table>
+
+<footer>
+    &copy; EXO 2026 - TODOS OS DIREITOS RESERVADOS
+</footer>
+
+</body>
+</html>
